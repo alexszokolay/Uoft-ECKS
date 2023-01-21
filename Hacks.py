@@ -2,6 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Iterable, Optional
 import csv
+import copy
 
 @dataclass
 class Interest:
@@ -9,7 +10,9 @@ class Interest:
 
     Instance Attributes:
       - every attribute is a bool value that decides if the interest helps to deal with an emotion
+      - title is the title of the interest
     """
+    title: str
     combats_Anger: bool
     combats_Sadness: bool
     combats_Stress: bool
@@ -20,18 +23,28 @@ class Interest:
 @dataclass
 class InterestsList:
     """
-    The list of all the interests.
+    The listy of all the interests.
     """
-    _list = []
+    listy = []
 
-    def add_Interest(self, interest: Interest) -> None:
-        """
-        Adds a given interest to the list
-        """
+    def __init__(self, interests: listy) -> None:
+        self.listy.append(Interest('Transportation', False, False, False, True, True))
+        self.listy.append(Interest('Performing Arts', True, False, False, True, False))
+        self.listy.append(Interest('Landmark or Attraction', False, True, True, True, False))
+        self.listy.append(Interest('Featured Park', True, False, True, False, False))
+        self.listy.append(Interest('Nature', True, False, True, False, False))
+        self.listy.append(Interest('Garden / Conservatory', False, True, True, False, True))
+        self.listy.append(Interest('Landmark', True, True, False, True, False))
+        self.listy.append(Interest('Gallery', False, False, False, True, True))
+        self.listy.append(Interest('Visitor Information', False, False, False, True, False))
+        self.listy.append(Interest('Attraction', False, False, True, True, True))
+        self.listy.append(Interest('Museum', False, False, True, True, False))
+        self.listy.append(Interest('Convention & Trade Centres', False, True, False, True, True))
+        self.listy.append(Interest('Sports / Entertainment Venue', False, True, False, True, True))
 
 
-def read_csv_file() -> Any:
-    """Return the set of interests.
+def get_set_of_interests() -> Any:
+    """Return the listy of interests.
     -
     Preconditions:
       - filename refers to a valid csv file with headers
@@ -54,8 +67,8 @@ def read_csv_file() -> Any:
                     names.append(row[i])
                 elif i == 2:
                     categs.append(row[i])
-    #return names, categs
-    return set(categs)
+    # return names, categs
+    return categs
 
 
 @dataclass
@@ -63,6 +76,7 @@ class TherapyTravel:
     """
         The main system class
         >>> abc = TherapyTravel()
+        >>> interest_List = InterestsList()
         Representation Invariants:
         -
     """
@@ -91,30 +105,48 @@ class TherapyTravel:
         """
         Method that returns two strongest emotions and the point difference between them or just the strongest emotion
         """
-        max_key = max(self.main_dict, key=self.main_dict.get)
-        st_value = (max_key, self.main_dict[max_key])
-        self.main_dict.pop(st_value[0])
-        max_key = max(self.main_dict, key=self.main_dict.get)
-        nd_value = (max_key, self.main_dict[max_key])
+        copy_of_dict = self.main_dict.copy()    #The copy was created so that the pop method below wouldn't
+                                                # mutate the original dict
+
+        max_key = max(copy_of_dict, key=copy_of_dict.get)
+        st_value = (max_key, copy_of_dict[max_key])
+        copy_of_dict.pop(st_value[0])
+        max_key = max(copy_of_dict, key=copy_of_dict.get)
+        nd_value = (max_key, copy_of_dict[max_key])
         point_difference = st_value[1] - nd_value[1]
 
         if point_difference > 5:
-            return st_value[0] #Anger or Sadness
+            return st_value[0]  # Anger or Sadness
         else:
             return st_value[0], nd_value[0]
 
 
-def emotion_giving_method(sys: TherapyTravel) -> str:
+def emotion_giving_method(sys: TherapyTravel, interests: InterestsList) -> str:
     """
     Method that will return an emotion based on the results of the 15-question survey
     """
-    if sys.two_strongest_emotions() == 'Anger':
-        return "anger remedy"
-    elif sys.two_strongest_emotions() == 'Boredom':
-        return 'boredom remedy'
-    elif sys.two_strongest_emotions() == 'Loneliness':
-        return 'loneliness remedy'
-    elif sys.two_strongest_emotions() == 'Sadness':
-        return 'sadness remedy'
-    elif sys.two_strongest_emotions() == 'Stress':
-        return 'stress remedy'
+    new_interests = []
+    emotion = None
+    two_emotions = None
+    if type(sys.two_strongest_emotions()) is tuple:
+        two_emotions = sys.two_strongest_emotions()
+    else:
+        emotion = sys.two_strongest_emotions()
+
+    for interest in interests.listy:
+        if (interest.title == emotion) or interest in two_emotions:
+
+
+
+
+    # if sys.two_strongest_emotions() == 'Anger':
+    #     for intere
+    #     return "anger remedy"
+    # elif sys.two_strongest_emotions() == 'Boredom':
+    #     return 'boredom remedy'
+    # elif sys.two_strongest_emotions() == 'Loneliness':
+    #     return 'loneliness remedy'
+    # elif sys.two_strongest_emotions() == 'Sadness':
+    #     return 'sadness remedy'
+    # elif sys.two_strongest_emotions() == 'Stress':
+    #     return 'stress remedy'
