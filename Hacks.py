@@ -47,6 +47,7 @@ def read_csv_file() -> Any:
     categs = []
     with open(file, 'r', newline='') as f:
         reader = csv.reader(f)
+        headers = next(reader)
         for row in reader:
             for i in range(len(row)):
                 if i == 0:
@@ -54,7 +55,6 @@ def read_csv_file() -> Any:
                 elif i == 2:
                     categs.append(row[i])
     #return names, categs
-
     return set(categs)
 
 
