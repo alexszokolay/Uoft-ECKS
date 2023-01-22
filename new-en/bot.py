@@ -60,10 +60,6 @@ class MyView(View):
     def __init__(self):
         super().__init__()  # timeout=10.0)
 
-    async def on_timeout(self):
-        print("terminating")
-        quit(1)
-
     async def button_callback(self, interaction: discord.Interaction):
         await interaction.response.edit_message(view=self)
 

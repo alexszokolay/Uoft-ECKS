@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71bb06ff-faee-45b1-97b3-a77026f8d804" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/UoftX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UoftX.iml" afterDir="false" />
+    <list default="true" id="71bb06ff-faee-45b1-97b3-a77026f8d804" name="Changes" comment="Fixed Indentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/questions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-en/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/new-en/bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +231,7 @@
       <workItem from="1674353481100" duration="415000" />
       <workItem from="1674353911999" duration="304000" />
       <workItem from="1674355143560" duration="1349000" />
-      <workItem from="1674356510825" duration="3820000" />
+      <workItem from="1674356510825" duration="5303000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1674352842129</created>
@@ -262,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674358873207</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed Indentation">
+      <created>1674361140431</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674361140431</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +277,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
     <MESSAGE value="Connect cohere to discord bot!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect cohere to discord bot!" />
+    <MESSAGE value="Fixed Indentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Indentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -286,7 +293,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/UoftX$discord_bot.coverage" NAME="discord bot Coverage Results" MODIFIED="1674355788387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new-en" />
-    <SUITE FILE_PATH="coverage/UoftX$bot.coverage" NAME="bot Coverage Results" MODIFIED="1674360666956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new-en" />
+    <SUITE FILE_PATH="coverage/UoftX$bot.coverage" NAME="bot Coverage Results" MODIFIED="1674362294125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new-en" />
     <SUITE FILE_PATH="coverage/UoftX$main.coverage" NAME="main Coverage Results" MODIFIED="1674355941736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/UoftX$cohere.coverage" NAME="_cohere Coverage Results" MODIFIED="1674357659628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
