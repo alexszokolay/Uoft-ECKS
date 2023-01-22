@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Uoft-ECKS.iml" filepath="$PROJECT_DIR$/.idea/Uoft-ECKS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/UoftX.iml" filepath="$PROJECT_DIR$/.idea/UoftX.iml" />
     </modules>
   </component>
 </project>
