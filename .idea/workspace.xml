@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71bb06ff-faee-45b1-97b3-a77026f8d804" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/UoftX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UoftX.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-en/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/new-en/bot.py" afterDir="false" />
-    </list>
+    <list default="true" id="71bb06ff-faee-45b1-97b3-a77026f8d804" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,6 +164,7 @@
       <updated>1674278557444</updated>
       <workItem from="1674352486298" duration="973000" />
       <workItem from="1674353481100" duration="415000" />
+      <workItem from="1674353911999" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1674352842129</created>
@@ -176,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674352842129</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changes">
+      <created>1674354094346</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674354094346</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changes">
+      <created>1674354128799</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674354128799</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +209,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/UoftX$discord_bot.coverage" NAME="discord bot Coverage Results" MODIFIED="1674353894929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new-en" />
+    <SUITE FILE_PATH="coverage/UoftX$discord_bot.coverage" NAME="discord bot Coverage Results" MODIFIED="1674354078494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new-en" />
     <SUITE FILE_PATH="coverage/UoftX$bot.coverage" NAME="bot Coverage Results" MODIFIED="1674352579933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new-en" />
   </component>
 </project>
