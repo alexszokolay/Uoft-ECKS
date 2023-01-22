@@ -1,6 +1,12 @@
 import discord
 from discord.ui import Button, View
 from discord.ext import commands
+import json
+from os import environ
+from dotenv import load_dotenv
+
+load_dotenv()
+token = environ["TOKEN"]
 
 intents = discord.Intents.all()
 
@@ -96,6 +102,4 @@ async def on_message(message):
         await message.channel.send(answers)
         await message.channel.send(emotions)
 
-
-client.run(
-    'MTA2NjIyNzcwNjAyODYyNTk1MA.GMDCaX.0dGbV_dCpdbIC_Vm0kif4RJQQv5z0eyWy0kVIA')
+client.run(token)
