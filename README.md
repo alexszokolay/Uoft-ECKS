@@ -23,7 +23,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -34,7 +33,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Vacation Therapy</h3>
 
   <p align="center">
     project_description
@@ -105,28 +104,16 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free Token to run a bot [Discord developer](https://discord.com/developers/applications)
 2. Clone the repo
    ```sh
    git clone https://github.com/alexszokolay/Uoft-ECKS.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Enter your Token in `.env`
+   ```py
+   TOKEN = 'TOKEN';
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -136,23 +123,9 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To run the bot, enter ```py bot.py```.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/alexszokolay/Uoft-ECKS/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,20 +161,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Gordon Huynh - [LinkedIn](https://www.linkedin.com/in/gordon-huynh-02a5571b3/) - businessmangordon@gmail.com
+
+David Pietrocola - [LinkedIn](https://www.linkedin.com/in/pietrocoladavid/) - pietrocoladavid@gmail.com
+
+Alex Szokolay - [LinkedIn](https://www.linkedin.com/in/alex-szokolay/) - alex.szokolay@mail.utoronto.ca
+
+Ivan Kraskov - [LinkedIn](https://www.linkedin.com/in/ivan-kraskov-b8827b22a/) - ivan.s.kraskov@gmail.com
 
 Project Link: [https://github.com/alexszokolay/Uoft-ECKS](https://github.com/alexszokolay/Uoft-ECKS)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
