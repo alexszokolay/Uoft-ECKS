@@ -1,9 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Iterable, Optional
-import csv
-import copy
 import random
+import copy
 
 
 @dataclass
@@ -53,8 +52,8 @@ class TherapyTravel:
     """
     main_dict: dict
 
-    def __init__(self) -> None:
-        self.main_dict = {'Anger': 0, 'Boredom': 0, 'Loneliness': 0, 'Stress': 0, 'Sadness': 0}
+    def __init__(self, dictionary: dict) -> None:
+        self.main_dict = dictionary
 
     def set_Emotions_test(self) -> None:
         """
@@ -81,7 +80,7 @@ class TherapyTravel:
         point_difference = st_value[1] - nd_value[1]
 
         if point_difference > 5:
-            return st_value[0]  # 'Anger' or 'Sadnessm' for example
+            return st_value[0]  # 'Anger' or 'Sadness' for example
         else:
             return st_value[0], nd_value[0]
 

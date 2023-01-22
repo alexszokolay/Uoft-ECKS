@@ -4,6 +4,10 @@ from discord.ext import commands
 import json
 from os import environ
 from dotenv import load_dotenv
+import clean_file_with_algorithm
+import cohere
+import clean_file_with_algorithm as algorithm
+
 
 load_dotenv()
 token = environ["TOKEN"]
@@ -46,7 +50,7 @@ class MyButton(Button):
             if key == self.emotion or key == emotion1 or key == emotion2:
                 emotions[key] += int(self.label)
         await interaction.response.send_message(
-            "Emotion=" + self.emotion + " is equal" + self.label)
+            "Thanks! Your input of " + self.label + " has been recorded.")
         answers.append(int(self.label))
 
 
@@ -99,7 +103,35 @@ async def on_message(message):
             await client.wait_for('message')
 
         f.close()
-        await message.channel.send(answers)
-        await message.channel.send(emotions)
+
+        therapy_bot = clean_file_with_algorithm.TherapyTravel(emotions)
+        interests = clean_file_with_algorithm.InterestsList()
+        output = clean_file_with_algorithm.emotion_giving_method(therapy_bot,
+                                                                   interests)
+
+        co = cohere.Client("MSuvC3ORXmJeWIzxj6D9vIw0QZAhfO6ibEmTlDYG")
+        prompt = f"\n Name real locations in Toronto I should go to if I like "\
+                 f"{output}"
+
+        # moddel = medium or xlarge
+        response = co.generate(
+            model='c1e4d1a2-5127-494b-8536-3d6845a4f267-ft',
+            prompt=prompt,
+            max_tokens=35,
+            temperature=0.9,
+            stop_sequences=["--"]
+        )
+
+        result = response.generations[0].text
+
+        embed_var = discord.Embed(title="Here is your custom suggestion!",
+                                  color=discord.Colour.light_grey())
+        embed_var.add_field(name="Interests",
+                            value=output,
+                            inline=True)
+        embed_var.add_field(name="Suggestion", value=result, inline=False)
+        await message.channel.send(embed=embed_var)
+
+
 
 client.run(token)
